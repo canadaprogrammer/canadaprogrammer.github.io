@@ -565,10 +565,69 @@ ul.social-buttons {
   color:rgb(0, 0, 0);
 }
 
-.fa-github {
-  
-}
-
 #link_github:hover {
   color: #fec503;
+}
+
+.icon-10, .icon-6, .icon-1 {
+  width: 9.4%;
+}
+
+.icon-10 {
+  margin: 0 1px;
+}
+.icon-6 {
+  margin: 0 12px;
+}
+
+.icon-1 {
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .icon-10, .icon-6, .icon-1 {
+    width: 8.9%;
+  }
+
+  .icon-6 {
+    margin: 0 7px;
+  }
+}
+
+@media (min-width: 768px) {
+  .icon-10, .icon-6, .icon-1 {
+    width: 17%;
+  }
+
+  .icon-6 {
+    margin: 0 13px;
+  }
+
+  .icon-1 {
+    margin: 1.4rem auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .icon-10, .icon-6, .icon-1 {
+    width: 9.1%;
+  }
+
+  .icon-6 {
+    margin: 0 9px;
+  }
+
+  .icon-1 {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .icon-10, .icon-6, .icon-1 {
+    width: 9.3%
+  }
+
+  .icon-6 {
+    margin: 0 11px;
+  }
 }
