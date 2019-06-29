@@ -16,13 +16,13 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
+    <!-- <script src="js/jqBootstrapValidation.js"></script> -->
 
     <!-- Custom scripts for this template -->
-    <!-- <script src="js/agency.min.js"></script> -->
+    <script src="js/agency.js"></script>
 	
 		<!-- Lightbox-->
-    <script src="js/ekko-lightbox.js"> </script>	
+    <!-- <script src="js/ekko-lightbox.js"> </script>	 -->
 	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -83,11 +83,11 @@
           </div>
         </div>
         <div class="row">
-          <div class="about-main col-lg-12">
-						<div class="about-image col-xs-12 col-sm-6 col-md-4">
+          <div id="about-main" class="col-lg-12">
+						<div id="about-image" class="col-xs-12 col-sm-6 col-md-4">
 							<img class="rounded-circle img-fluid" src="images/about_2.jpg" alt="Jin's Photo">
 						</div>
-						<div class="about-body col-xs-12 col-sm-6 col-md-8">
+						<div id="about-body" class="col-xs-12 col-sm-6 col-md-8">
 							<div class="about-text">
 								<p class="text-muted">Jungjin has gained valuable work experience for a year.  
 								Coded for unit testing <b>REST API</b> by using <b>Laravel PHP framework</b>, 
@@ -100,10 +100,16 @@
 								an Inha University graduate in Statistics and Finance.  <br>
 								Jin spends his free time watching movies, riding bicycle and playing games with his two children.</p>
 							</div>
-							<div class="about-link">
-								<button id="btn_resume"><a href="sources/jinpark_resume.pdf" target="_blank">Resume</a></button>
-								<a id="link_fcc" href="https://www.freecodecamp.org/jin_programmer" target="_blank"><img src="images/freecodecamp.png" alt="free Code Camp"></a>
-								<a id="link_github" href="https://github.com/developerjinpark" target="_blank"><i class="fa fa-github"></i></a>
+							<div id="about-link">
+								<div class="links">
+									<button id="btn_resume"><a href="sources/jinpark_resume.pdf" target="_blank">Resume</a></button>
+								</div>
+								<div class="links">
+									<a id="link_fcc" href="https://www.freecodecamp.org/jin_programmer" target="_blank"><img src="images/freecodecamp.png" alt="free Code Camp"></a>
+								</div>
+								<div class="links">
+									<a id="link_github" href="https://github.com/developerjinpark" target="_blank"><i class="fa fa-github"></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -157,7 +163,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted"></h3>
+            <!-- <h3 class="section-subheading text-muted"></h3> -->
           </div>
         </div>
         <div class="row">
@@ -311,45 +317,52 @@
 								</div>
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-lg-8 mx-auto">
+								<div class="modal-skills">
+									<div class="icon-10">
+										<img class="img-fluid d-block mx-auto" src="images/php.png" alt="PHP">
+									</div>
+									<div class="icon-10">
+										<img class="img-fluid d-block mx-auto" src="images/laravel.png" alt="Laravel">
+									</div>
+									<div class="icon-10">
+										<img class="img-fluid d-block mx-auto" src="images/jquery.gif" alt="jQuery">
+									</div>
+									<div class="icon-10">
+										<img class="img-fluid d-block mx-auto" src="images/ajax.png" alt="Ajax">
+									</div>
+									<div class="icon-10">
+										<img class="img-fluid d-block mx-auto" src="images/git.png" alt="Git">
+									</div>
+									<div class="icon-10">
+										<img class="img-fluid d-block mx-auto" src="images/mysql.png" alt="MySQL">
+									</div>
+									<div class="icon-10">
+										<img class="img-fluid d-block mx-auto" src="images/aws.png" alt="AWS">
+									</div>
+									<div class="icon-10">
+										<img class="img-fluid d-block mx-auto" src="images/javascript.png" alt="JavaScript">
+									</div>			  
+									<div class="icon-10">
+										<img class="img-fluid d-block mx-auto" src="images/html.png" alt="HTML">
+									</div>			  
+									<div class="icon-10">
+										<img class="img-fluid d-block mx-auto" src="images/css.png" alt="CSS">
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-8 mx-auto">
+								<!-- <div class="modal-description"> -->
+									<p class="text-muted">The project had been developed on Laravel PHP framework for a mobile application. 
+										After working for unit testing, Jin made the prototype web page.</p>
+								<!-- </div> -->
+							</div>
+						</div>
 					</div>
-
-					<div class="row" style="margin:0 auto;">
-						<div class="icon-10" style="padding-left:5px;padding-right:5px;">
-							<img class="img-fluid d-block mx-auto" src="images/php.png" alt="PHP">
-						</div>
-						<div class="icon-10" style="padding-left:5px;padding-right:5px;">
-							<img class="img-fluid d-block mx-auto" src="images/laravel.png" alt="Laravel">
-						</div>
-						<div class="icon-10" style="padding-left:5px;padding-right:5px;">
-							<img class="img-fluid d-block mx-auto" src="images/jquery.gif" alt="jQuery">
-						</div>
-						<div class="icon-10" style="padding-left:5px;padding-right:5px;">
-							<img class="img-fluid d-block mx-auto" src="images/ajax.png" alt="Ajax">
-						</div>
-						<div class="icon-10" style="padding-left:5px;padding-right:5px;">
-							<img class="img-fluid d-block mx-auto" src="images/git.png" alt="Git">
-						</div>
-						<div class="icon-10" style="padding-left:5px;padding-right:5px;">
-							<img class="img-fluid d-block mx-auto" src="images/mysql.png" alt="MySQL">
-						</div>
-						<div class="icon-10" style="padding-left:5px;padding-right:5px;">
-							<img class="img-fluid d-block mx-auto" src="images/aws.png" alt="AWS">
-						</div>
-						<div class="icon-10" style="padding-left:5px;padding-right:5px;">
-							<img class="img-fluid d-block mx-auto" src="images/javascript.png" alt="JavaScript">
-						</div>			  
-						<div class="icon-10" style="padding-left:5px;padding-right:5px;">
-							<img class="img-fluid d-block mx-auto" src="images/html.png" alt="HTML">
-						</div>			  
-						<div class="icon-10" style="padding-left:5px;padding-right:5px;">
-							<img class="img-fluid d-block mx-auto" src="images/css.png" alt="CSS">
-						</div>			  
-					</div>
-					
-					<div class="row" style="margin:0 auto;">
-						<p class="text-muted">The project had been developed on Laravel PHP framework for a mobile application.<br>
-							After working for unit testing, Jin made the prototype web page.</p>
-					</div>			
 				</div>
 			</div>
 		</div>
@@ -380,7 +393,7 @@
 						</div>
 					</div>
 
-					<div class="row" style="margin:0 auto;">
+					<div class="row">
 						<div class="icon-6" style="padding-left:5px;padding-right:5px;">
 							<img class="img-fluid d-block mx-auto" src="images/nodejs.png" alt="node.js">
 						</div>
@@ -401,7 +414,7 @@
 						</div>
 					</div>
 					
-					<div class="row" style="margin:0 auto;">
+					<div class="row">
 					<p class="text-muted">This REST API had been developed on Express node.js framework.<br>
 						In order to synchronize the own calendar app with Google Calendar and Outlook Calendar,<br>
 						Jin worked on getting authentication from them, handling CRUD events and matching format.</p>
@@ -438,13 +451,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="row" style="margin:0 auto;">
+					<div class="row">
 						<div class="col-md-2 col-sm-2" style="margin: 0 auto;">
 							<img class="img-fluid d-block mx-auto" src="images/csharp.png" alt="C#">
 						</div>	
 					</div>
 
-					<div class="row" style="margin:0 auto;">
+					<div class="row">
 						<p class="text-muted">This application made by using C# and<br>
 							it has functions of clock, timer and stopwatch.</p>
 					</div>

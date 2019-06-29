@@ -8422,6 +8422,12 @@ a.text-dark:focus, a.text-dark:hover {
   .text-muted {
     font-size: 1.7em;
   }
+
+}
+@media (min-width: 1200px) {
+  .text-muted {
+    font-size: 2rem;
+  }
 }
 
 .text-hide {
