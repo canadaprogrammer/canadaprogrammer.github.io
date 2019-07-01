@@ -893,7 +893,7 @@ pre code {
 max-width: 16.666667%;
 }
 
-@media (min-width: 250px) {
+@media (min-width: 320px) {
   .col-xs-2 {
     -ms-flex: 0 0 16.666667%;
         flex: 0 0 16.666667%;
@@ -8408,13 +8408,13 @@ a.text-dark:focus, a.text-dark:hover {
 }
 @media (min-width: 576px) {
   .text-muted {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 }
 
 @media (min-width: 768px) {
   .text-muted {
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
 }
 

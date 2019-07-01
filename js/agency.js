@@ -53,22 +53,59 @@ $(document).ready(function () {
   
   $(window).resize(function() {
     let width = window.innerWidth;
+
+    // for responsive about-image
     let aboutImage = document.getElementById('about-image').children[0];
-    if (width <= 360) {
+    if (width <= 575) {
       aboutImage.setAttribute('src', 'images/about_1.jpg');
+      aboutImage.setAttribute('style', 'width: 100%');
     } else {
       aboutImage.setAttribute('src', 'images/about_2.jpg');
+      aboutImage.removeAttribute('style');
+    }
+    
+    // for responsive portfolio video
+    let modal = document.getElementsByClassName('modal-body');
+    if (width < 576) {
+      $.each( modal, function (i, m) {
+        let video = m.children[1];
+        video.setAttribute('width', '240');
+        if (i < 2) {
+          video.setAttribute('height', '140');
+        } else {
+          video.setAttribute('height', '320');
+        }
+      });
+    } else if (width < 768) {
+      $.each( modal, function (i, m) {
+        let video = m.children[1];
+        if (i < 2) {
+          video.setAttribute('width', '450');
+          video.setAttribute('height', '255');
+        } else {
+          video.setAttribute('width', '287');
+          video.setAttribute('height', '385');
+        }
+      });
+    } else {
+      $.each( modal, function (i, m) {
+        let video = m.children[1];
+        if (i < 2) {
+          video.setAttribute('width', '560');
+          video.setAttribute('height', '320');
+        } else {
+          video.setAttribute('width', '330');
+          video.setAttribute('height', '450');
+        }
+      });
     }
 
+    // for responsive 
     let links = document.getElementById('about-link');
-    console.log(links);
-    if (width >= 576 && width < 717) {
-      links.classList.add('col-lg-12');
-      links.setAttribute('style', 'margin-top: 1rem;');
+    // console.log(links);
+    if (width <= 767) {
       document.getElementById('about-main').appendChild(links);
     } else {
-      links.classList.remove('col-lg-12');
-      links.removeAttribute('style');
       document.getElementById('about-body').appendChild(links);
     }
   });
