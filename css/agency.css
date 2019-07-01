@@ -32,13 +32,14 @@ section {
     text-transform: none;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
-/* @media (min-width: 992px) {
+/* @media (min-width: 691px) { */
+@media (min-width: 768px) {
   section {
-    padding: 50px 0; } } */
+    padding: 16rem 0; } }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   section {
-    padding: 100px 0; } }
+    padding: 10rem 0; } }
 
 .btn {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -179,9 +180,12 @@ header.masthead .intro-text {
   margin: 15px 0;
   text-transform: none; } */
 
-section #about {
-  height: 100vh;
-}
+/* @media (min-width: 691px){
+  section {
+    height: 100vh;
+  }
+} */
+
 
 #about-link {
   float: left;
@@ -337,7 +341,7 @@ section #about {
   #portfolio .portfolio-item .portfolio-caption {
     max-width: 400px;
     margin: 0 auto;
-    padding: 25px;
+    padding: 1rem;
     text-align: center;
     background-color: #fff; }
     #portfolio .portfolio-item .portfolio-caption h4 {
