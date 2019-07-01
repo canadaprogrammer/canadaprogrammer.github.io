@@ -66,14 +66,25 @@ $(document).ready(function () {
     
     // for responsive portfolio video
     let modal = document.getElementsByClassName('modal-body');
-    if (width < 576) {
+    if (width < 450) {
       $.each( modal, function (i, m) {
         let video = m.children[1];
         video.setAttribute('width', '240');
         if (i < 2) {
-          video.setAttribute('height', '140');
+          video.setAttribute('height', '130');
         } else {
           video.setAttribute('height', '320');
+        }
+      });
+    } else if (width < 576) {
+      $.each( modal, function (i, m) {
+        let video = m.children[1];
+        if (i < 2) {
+          video.setAttribute('width', '340');
+          video.setAttribute('height', '183');
+        } else {
+          video.setAttribute('width', '300');
+          video.setAttribute('height', '400');
         }
       });
     } else if (width < 768) {
@@ -81,21 +92,18 @@ $(document).ready(function () {
         let video = m.children[1];
         if (i < 2) {
           video.setAttribute('width', '450');
-          video.setAttribute('height', '255');
-        } else {
-          video.setAttribute('width', '287');
-          video.setAttribute('height', '385');
-        }
+          video.setAttribute('height', '245');
+        } 
       });
     } else {
       $.each( modal, function (i, m) {
         let video = m.children[1];
         if (i < 2) {
           video.setAttribute('width', '560');
-          video.setAttribute('height', '320');
+          video.setAttribute('height', '300');
         } else {
-          video.setAttribute('width', '330');
-          video.setAttribute('height', '450');
+          video.setAttribute('width', '380');
+          video.setAttribute('height', '507');
         }
       });
     }
