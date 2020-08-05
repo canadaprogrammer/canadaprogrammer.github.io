@@ -1,0 +1,288 @@
+.title {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.divider {
+  border-bottom: 3px solid;
+  width: 80px;
+  margin: 0 auto 16px;
+}
+.contents {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.contents .content b {
+  font-weight: 700;
+}
+section {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: white;
+  background: linear-gradient(to right, #00223c, #004b85 30%, #004b85 70%, #00223c);
+}
+section:nth-of-type(2n+1) {
+  color: #004b85;
+  background: #fff;
+}
+#about .image {
+  text-align: center;
+}
+#about img {
+  width: 100%;
+  max-width: 200px;
+}
+#experience .card {
+  background-color: transparent;
+}
+#experience .card-header {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-bottom: unset;
+}
+#experience .card-header .header {
+  text-align: left;
+}
+#experience .card-header .header span {
+  display: block;
+}
+#experience .btn-link {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+}
+#experience .btn-link.btn {
+  border-radius: unset;
+}
+#experience .btn-link.btn:hover {
+  text-decoration: none;
+}
+#experience .btn-link .fa {
+  display: none;
+}
+#experience .btn-link .fa.active {
+  display: inline-block;
+}
+#experience .card-body ul {
+  padding-inline-start: 20px;
+}
+#experience .collapse,
+#experience .collapsing {
+  background: linear-gradient(to right, #00223c, #00365f 30%, #00365f 70%, #00223c);
+}
+#portfolio .contents {
+  justify-content: center;
+}
+#portfolio .w33 {
+  width: 100%;
+  padding: 8px;
+  margin: 8px;
+  background-color: #004b85;
+  border-radius: 15px;
+  position: relative;
+  letter-spacing: 0;
+}
+#portfolio .w33 .image,
+#portfolio .w33 .content,
+#portfolio .w33 .btn {
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+#portfolio .w33 .image {
+  background-size: cover;
+  height: 45.4vw;
+}
+#portfolio .w33 .content,
+#portfolio .w33 .btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  opacity: 0;
+}
+#portfolio .w33 .content {
+  top: 0;
+}
+#portfolio .w33 .content .name {
+  font-weight: 700;
+}
+#portfolio .w33 .content .skills {
+  font-size: 12px;
+}
+#portfolio .w33 .btn {
+  bottom: 0;
+  border: 2px solid white;
+  margin: 0 auto;
+  width: 150px;
+  padding: 8px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+#portfolio .w33:hover .image {
+  opacity: 0;
+}
+#portfolio .w33:hover .content,
+#portfolio .w33:hover .btn {
+  opacity: 1;
+}
+#portfolio .w33:hover .content {
+  top: 32px;
+}
+#portfolio .w33:hover .btn {
+  bottom: 32px;
+}
+#resume .slider-wrap {
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+#resume .resume-slider .slick-prev:before,
+#resume .resume-slider .slick-next:before {
+  color: white;
+}
+#resume .contents {
+  justify-content: space-between;
+}
+#resume .major {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+#resume .major span {
+  font-weight: 300;
+  font-size: 15px;
+}
+#resume .school {
+  margin-bottom: 1.5rem;
+}
+#resume ul {
+  margin-bottom: 0;
+}
+#resume #edu ul {
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+}
+.links .pentagon {
+  background-image: url('/images/pentagon.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  width: 92px;
+  height: 92px;
+  position: relative;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.links .pentagon:first-child {
+  margin-left: 0;
+}
+.links .pentagon:last-child {
+  margin-right: 0;
+}
+.links .pentagon .link-contact {
+  position: absolute;
+  color: white;
+}
+.links .pentagon .link-contact#email {
+  font-size: 19px;
+  top: 38%;
+  left: 15%;
+}
+.links .pentagon .link-contact#github {
+  font-size: 49px;
+  left: 27%;
+  top: 18%;
+}
+.links .pentagon .link-contact#code-camp {
+  font-size: 42px;
+  left: 22%;
+  top: 23%;
+}
+.links .pentagon .link-contact:hover {
+  color: white;
+  text-decoration: none;
+}
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .divider {
+    margin-bottom: 3rem;
+  }
+  #about img {
+    max-width: unset;
+  }
+  #experience .card-header .header span {
+    display: inline-block;
+  }
+  #experience .btn-link {
+    font-size: 23px;
+    padding: 20px;
+  }
+  #portfolio .w33 {
+    width: 47%;
+  }
+  #portfolio .w33 .image {
+    height: 22.6vw;
+  }
+  #resume .contents {
+    font-size: 19px;
+  }
+  #resume .major span {
+    font-size: 17px;
+  }
+  .links .btn {
+    padding: 8px 32px;
+    font-size: 30px;
+    width: 180px;
+  }
+  .links .btn.icon {
+    font-size: 45px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #portfolio .w33 {
+    width: 31%;
+  }
+  #portfolio .w33 .image {
+    height: 15vw;
+  }
+  #resume .slider-wrap {
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  #portfolio .w33 .content .name {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #experience .card-header .header div {
+    display: inline-block;
+  }
+  #portfolio .w33 .image {
+    height: 185px;
+  }
+  #resume .contents,
+  #resume .major span {
+    font-size: 22px;
+  }
+}

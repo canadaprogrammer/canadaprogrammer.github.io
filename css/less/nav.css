@@ -1,0 +1,167 @@
+header {
+  color: white;
+  background: #004b85;
+  border-bottom: 3px solid white;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.navbar-brand {
+  font-family: 'Lemonada', cursive;
+  text-align: center;
+}
+.navbar-brand h1,
+.navbar-brand .brand {
+  line-height: 1;
+  margin-bottom: 0;
+  font-size: 24px;
+}
+h3,
+.sub-title {
+  font-size: 17px;
+}
+.sub-title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#pentagon {
+  background-image: url('/images/pentagon-border-1.png');
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  opacity: 0.7;
+}
+#pentagon:focus {
+  opacity: 1;
+}
+.pentagon-bg {
+  position: relative;
+  width: 54px;
+  box-sizing: content-box;
+  border-width: 50px 18px 0;
+  border-style: solid;
+  border-color: #004b85 transparent;
+}
+.pentagon-bg:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -85px;
+  left: -18px;
+  border-width: 0 45px 35px;
+  border-style: solid;
+  border-color: transparent transparent #004b85;
+}
+.navbar-toggler {
+  padding: 0.25rem 0.65rem;
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  margin-top: 7px;
+  width: 1.2em;
+  height: 1.2em;
+}
+.navbar-nav {
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+.nav-link {
+  cursor: pointer;
+}
+.nav-link.active {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.nav-link {
+  text-transform: uppercase;
+}
+footer {
+  color: white;
+  background: #004b85;
+  padding-top: 16px;
+}
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+footer .contact a:hover {
+  color: white;
+  text-decoration: none;
+}
+footer .copyright {
+  margin-top: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+  background-color: #00365f;
+}
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 22px;
+  }
+  .navbar-brand h1,
+  .navbar-brand .brand {
+    font-size: 32px;
+  }
+  .navbar-brand .description,
+  .navbar-brand .sub-brand {
+    word-spacing: 8px;
+    letter-spacing: 4px;
+  }
+  #pentagon {
+    width: 55px;
+    height: 55px;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 0.75rem;
+  }
+  .navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  h3,
+  .sub-title {
+    font-size: 1.75rem;
+  }
+  footer {
+    padding-top: 43px;
+  }
+  footer .copyright {
+    margin-top: 75px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header,
+  footer {
+    background: linear-gradient(to right, #00223c, #004b85 30%, #004b85 70%, #00223c);
+  }
+  footer .copyright {
+    background: linear-gradient(to right, #00223c, #00365f 30%, #00365f 70%, #00223c);
+  }
+  footer {
+    padding-top: 75px;
+  }
+  footer .contact {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
