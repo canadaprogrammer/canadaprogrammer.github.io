@@ -184,6 +184,12 @@ section:nth-of-type(2n+1) {
   margin-left: 4px;
   margin-right: 4px;
 }
+.links .pentagon:hover {
+  background-image: url('/images/pentagon-w.png');
+}
+.links .pentagon:hover .link-contact {
+  color: #004b85;
+}
 .links .pentagon:first-child {
   margin-left: 0;
 }
@@ -196,8 +202,9 @@ section:nth-of-type(2n+1) {
 }
 .links .pentagon .link-contact#email {
   font-size: 19px;
+  font-weight: 700;
   top: 38%;
-  left: 15%;
+  left: 14%;
 }
 .links .pentagon .link-contact#github {
   font-size: 49px;
@@ -210,7 +217,6 @@ section:nth-of-type(2n+1) {
   top: 23%;
 }
 .links .pentagon .link-contact:hover {
-  color: white;
   text-decoration: none;
 }
 @media only screen and (max-width: 767px) {

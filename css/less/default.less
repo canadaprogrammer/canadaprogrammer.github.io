@@ -194,6 +194,12 @@ section {
 		position: relative;
 		margin-left: 4px;
 		margin-right: 4px;
+		&:hover {
+			background-image: url('/images/pentagon-w.png');
+			.link-contact {
+				color: @blue;
+			}
+		}
 		&:first-child {
 			margin-left: 0;
 		}
@@ -205,8 +211,9 @@ section {
 			color: white;
 			&#email {
 				font-size: 19px;
+				font-weight: 700;
 				top: 38%;
-				left: 15%;
+				left: 14%;
 			}
 			&#github {
 				font-size: 49px;
@@ -219,7 +226,6 @@ section {
 				top: 23%;
 			}
 			&:hover {
-				color: white;
 				text-decoration: none;
 			}
 		}

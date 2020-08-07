@@ -7,17 +7,14 @@ $(function() {
 	}
 
 	// NAV POSITION
-	var navPos = $('nav').position().top;
-	var lastPos = 0;
-	var lockTimer;
-  
 	$(window).on('scroll', function() {
 	  var pos = $(window).scrollTop();
 	  var pos2 = pos + navHeight;
-		var scrollBottom = pos + $(window).height();
 		
 		// ACTION BRAND NAME
-		if (pos >= navPos + $('nav').height() && lastPos < pos) {
+		if (isMobile && pos >= $('nav').height()) {
+			$('.navbar-brand .description').hide('slow');
+		} else if (pos >= $('#experience').height()) {
 			$('.navbar-brand .description').hide('slow');
 		} else {
 			$('.navbar-brand .description').fadeIn('slow');
@@ -40,16 +37,6 @@ $(function() {
 		pos + $(window).height() === $(document).height()) {
 			highlightLink('contact');
 	  }
-  
-	  // Prevent Hover on Scroll
-	  // clearTimeout(lockTimer);
-	  // if (!$('body').hasClass('disable-hover')) {
-		// 	$('body').addClass('disable-hover');
-	  // }
-  
-	  // lockTimer = setTimeout(function() {
-		// 	$('body').removeClass('disable-hover');
-		// 	}, 500);
 	});
   
 	function highlightLink(anchor) {
