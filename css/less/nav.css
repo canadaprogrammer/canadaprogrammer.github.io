@@ -21,12 +21,16 @@ a {
 .navbar-brand {
   font-family: 'Lemonada', cursive;
   text-align: center;
+  width: 235px;
 }
 .navbar-brand h1,
 .navbar-brand .brand {
   line-height: 1;
   margin-bottom: 0;
   font-size: 24px;
+}
+.navbar-brand #logo img {
+  width: 70px;
 }
 h3,
 .sub-title {
@@ -55,7 +59,7 @@ h3,
   border-color: #004b85 transparent;
 }
 .pentagon-bg:before {
-  content: "";
+  content: '';
   position: absolute;
   height: 0;
   width: 0;
@@ -152,10 +156,22 @@ footer .copyright {
 @media only screen and (min-width: 1024px) {
   header,
   footer {
-    background: linear-gradient(to right, #00223c, #004b85 30%, #004b85 70%, #00223c);
+    background: linear-gradient(
+      to right,
+      #00223c,
+      #004b85 30%,
+      #004b85 70%,
+      #00223c
+    );
   }
   footer .copyright {
-    background: linear-gradient(to right, #00223c, #00365f 30%, #00365f 70%, #00223c);
+    background: linear-gradient(
+      to right,
+      #00223c,
+      #00365f 30%,
+      #00365f 70%,
+      #00223c
+    );
   }
   footer {
     padding-top: 75px;
