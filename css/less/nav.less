@@ -1,8 +1,47 @@
-@blue: #004b85;
-@dark-blue: #00365f;
-@shadow-blue: #00223c;
+/* Fonts
+font-family: 'Dosis', sans-serif;
+font-weight: 400, 700, 800;
+
+font-family: 'Exo', sans-serif;
+font-weight: 400, 600;
+
+font-family: 'Special Elite', cursive;
+*/
+
+@001: rgb(58, 0, 124);
+@001-1: rgb(40, 0, 87);
+@001-2: rgb(24, 0, 51);
+@002: rgb(0, 69, 178);
+@003: rgb(0, 113, 211);
+@004: rgb(0, 153, 221);
+@005: rgb(0, 190, 214);
+@006: rgb(0, 226, 200);
+
+@001-t: rgba(58, 0, 124, 0.8);
+@002-t: rgba(0, 69, 178, 0.8);
+@003-t: rgba(0, 113, 211, 0.8);
+@004-t: rgba(0, 153, 221, 0.8);
+@005-t: rgba(0, 190, 214, 0.8);
+@006-t: rgba(0, 226, 200, 0.8);
+
+.default-gradient {
+  background-image: linear-gradient(19deg, @001, @002, @003, @004, @005, @006);
+}
+.default-gradient-transparent {
+  background-image: linear-gradient(
+    19deg,
+    @001-t,
+    @002-t,
+    @003-t,
+    @004-t,
+    @005-t,
+    @006-t
+  );
+}
 
 header {
+  font-family: 'Exo', sans-serif;
+  font-weight: 400;
   color: white;
   background: transparent;
   // border-bottom: 3px solid white;
@@ -12,29 +51,11 @@ header {
   left: 0;
   right: 0;
   &.scrolled {
-    background-image: linear-gradient(
-      to right,
-      rgba(40, 0, 87, 0.5),
-      rgba(0, 55, 137, 0.5),
-      rgba(0, 99, 171, 0.5),
-      rgba(0, 140, 190, 0.5),
-      rgba(0, 181, 197, 0.5),
-      rgba(80, 219, 200, 0.5)
-    );
+    .default-gradient-transparent;
   }
 }
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
 .navbar-brand {
-  font-family: 'Lemonada', cursive;
+  font-weight: 700;
   text-align: center;
   width: 235px;
   h1,
@@ -71,7 +92,7 @@ h3,
   box-sizing: content-box;
   border-width: 50px 18px 0;
   border-style: solid;
-  border-color: @blue transparent;
+  border-color: @001 transparent;
 }
 .pentagon-bg:before {
   content: '';
@@ -82,14 +103,11 @@ h3,
   left: -18px;
   border-width: 0 45px 35px;
   border-style: solid;
-  border-color: transparent transparent @blue;
+  border-color: transparent transparent @001;
 }
 .navbar-toggler {
   padding: 0.25rem 0.65rem;
   border: none;
-}
-button:focus {
-  outline: none;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -101,17 +119,17 @@ button:focus {
   flex-grow: 1;
   justify-content: space-evenly;
 }
-.nav-item {
-  a.btn {
-    color: #50dbc8;
-    background-color: #280057;
-    border: 2px solid #280057;
-    &:hover {
-      background-color: transparent;
-      color: #280057;
-    }
-  }
-}
+// .nav-item {
+//   a.btn {
+//     color: #50dbc8;
+//     background-color: #280057;
+//     border: 2px solid #280057;
+//     &:hover {
+//       background-color: transparent;
+//       color: #280057;
+//     }
+//   }
+// }
 .nav-link {
   cursor: pointer;
   text-transform: uppercase;
@@ -121,10 +139,15 @@ button:focus {
     font-weight: 700;
     letter-spacing: 2px;
   }
+  &:focus,
+  &:hover {
+    color: #eee;
+    text-shadow: -2px -1px #280057;
+  }
 }
 footer {
   color: white;
-  background: @blue;
+  background: @001;
   padding-top: 16px;
   .contact {
     display: flex;
@@ -141,7 +164,7 @@ footer {
     padding-top: 16px;
     padding-bottom: 16px;
     text-align: center;
-    background-color: @dark-blue;
+    background-color: @001;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -185,19 +208,13 @@ footer {
   //   background: linear-gradient(
   //     to right,
   //     @shadow-blue,
-  //     @blue 30%,
-  //     @blue 70%,
+  //     @001 30%,
+  //     @001 70%,
   //     @shadow-blue
   //   );
   // }
   footer .copyright {
-    background: linear-gradient(
-      to right,
-      @shadow-blue,
-      @dark-blue 30%,
-      @dark-blue 70%,
-      @shadow-blue
-    );
+    .default-gradient;
   }
   footer {
     padding-top: 75px;
