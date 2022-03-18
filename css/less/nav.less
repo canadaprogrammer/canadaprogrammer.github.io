@@ -4,13 +4,24 @@
 
 header {
   color: white;
-  background: @blue;
-  border-bottom: 3px solid white;
+  background: transparent;
+  // border-bottom: 3px solid white;
   z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  &.scrolled {
+    background-image: linear-gradient(
+      to right,
+      rgba(40, 0, 87, 0.5),
+      rgba(0, 55, 137, 0.5),
+      rgba(0, 99, 171, 0.5),
+      rgba(0, 140, 190, 0.5),
+      rgba(0, 181, 197, 0.5),
+      rgba(80, 219, 200, 0.5)
+    );
+  }
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -90,15 +101,26 @@ button:focus {
   flex-grow: 1;
   justify-content: space-evenly;
 }
+.nav-item {
+  a.btn {
+    color: #50dbc8;
+    background-color: #280057;
+    border: 2px solid #280057;
+    &:hover {
+      background-color: transparent;
+      color: #280057;
+    }
+  }
+}
 .nav-link {
   cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px #280057;
   &.active {
     font-weight: 700;
     letter-spacing: 2px;
   }
-}
-.nav-link {
-  text-transform: uppercase;
 }
 footer {
   color: white;
@@ -123,9 +145,6 @@ footer {
   }
 }
 @media only screen and (min-width: 768px) {
-  body {
-    font-size: 22px;
-  }
   .navbar-brand {
     h1,
     .brand {
@@ -161,16 +180,16 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
-  header,
-  footer {
-    background: linear-gradient(
-      to right,
-      @shadow-blue,
-      @blue 30%,
-      @blue 70%,
-      @shadow-blue
-    );
-  }
+  // header,
+  // footer {
+  //   background: linear-gradient(
+  //     to right,
+  //     @shadow-blue,
+  //     @blue 30%,
+  //     @blue 70%,
+  //     @shadow-blue
+  //   );
+  // }
   footer .copyright {
     background: linear-gradient(
       to right,

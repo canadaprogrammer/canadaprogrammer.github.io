@@ -2,317 +2,353 @@
 @dark-blue: #00365f;
 @shadow-blue: #00223c;
 
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 22px;
+  }
+}
 .title {
-	text-transform: uppercase;
-	font-weight: 700;
-	text-align: center;
-	letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
 }
 .divider {
-	border-bottom: 3px solid;
-	width: 80px;
-	margin: 0 auto 16px;
+  border-bottom: 3px solid;
+  width: 80px;
+  margin: 0 auto 16px;
 }
 .contents {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	.content b {
-		font-weight: 700;
-	}
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .content b {
+    font-weight: 700;
+  }
 }
 section {
-	padding-top: 16px;
-	padding-bottom: 16px;
-	color: white;
-	background: linear-gradient(to right, @shadow-blue, @blue 30%, @blue 70%, @shadow-blue);
-	&:nth-of-type(2n+1) {
-		color: @blue;
-		background: #fff;
-	}
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: white;
+  background: linear-gradient(
+    to right,
+    @shadow-blue,
+    @blue 30%,
+    @blue 70%,
+    @shadow-blue
+  );
+  &:nth-of-type(2n + 1) {
+    color: @blue;
+    background: #fff;
+  }
+}
+#intro {
+  height: 100vh;
+  background-image: linear-gradient(
+    to right top,
+    #280057,
+    #003789,
+    #0063ab,
+    #008cbe,
+    #00b5c5,
+    #50dbc8
+  );
 }
 #about {
-	.image {
-		text-align: center;
-	}
-	img {
-		width: 100%;
-		max-width: 200px;
-	}
+  .image {
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    max-width: 200px;
+  }
 }
 #experience {
-	.card {
-		background-color: transparent;
-	}
-	.card-header {
-		background-color: transparent;
-		padding: 0;
-		margin: 0;
-		border-bottom: unset;
-		.header {
-			text-align: left;
-			span {
-				display: block;
-			}
-		}
-	}
-	.btn-link {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		color: white;
-		padding: 16px;
-		border-top: 1px solid rgba(255,255,255,0.7);
-		border-bottom: 1px solid rgba(255,255,255,0.7);
-		font-size: 16px;
-		&.btn {
-			border-radius: unset;
-			&:hover {
-				text-decoration: none;
-			}
-		}
-		.fa {
-			display: none;
-			&.active {
-				display: inline-block;
-			}
-		}
-	}
-	.card-body ul {
-		padding-inline-start: 20px;
-	}
-	.collapse, .collapsing {
-		background: linear-gradient(to right, @shadow-blue, @dark-blue 30%, @dark-blue 70%, @shadow-blue);
-	}
+  .card {
+    background-color: transparent;
+  }
+  .card-header {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border-bottom: unset;
+    .header {
+      text-align: left;
+      span {
+        display: block;
+      }
+    }
+  }
+  .btn-link {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    &.btn {
+      border-radius: unset;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .fa {
+      display: none;
+      &.active {
+        display: inline-block;
+      }
+    }
+  }
+  .card-body ul {
+    padding-inline-start: 20px;
+  }
+  .collapse,
+  .collapsing {
+    background: linear-gradient(
+      to right,
+      @shadow-blue,
+      @dark-blue 30%,
+      @dark-blue 70%,
+      @shadow-blue
+    );
+  }
 }
 #portfolio {
-	.contents {
-		justify-content: center;
-	}
-	.w33 {
-		width: 100%;
-		padding: 8px;
-		margin: 8px;
-		background-color: @blue;
-		border-radius: 15px;
-		position: relative;
-		letter-spacing: 0;
-		.image, .content, .btn {
-			transition: all .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-		}
-		.image {
-			background-size: cover;
-			height: 45.4vw;
-		}
-		.content, .btn {
-			position: absolute;
-			left: 0;
-			right: 0;
-			color: white;
-			text-align: center;
-			opacity: 0;
-		}
-		.content {
-			top: 0;
-			.name {
-				font-weight: 700;
-			}
-			.skills {
-				font-size: 12px;
-			}
-		}
-		.btn {
-			bottom: 0;
-			border: 2px solid white;
-			margin: 0 auto;
-			width: 150px;
-			padding: 8px 0;
-			line-height: 1;
-			text-transform: uppercase;
-			font-size: 15px;
-			cursor: pointer;
-		}
-		&:hover {
-			.image {
-				opacity: 0;
-			}
-			.content, .btn {
-				opacity: 1;
-			}
-			.content {
-				top: 32px;
-			}
-			.btn {
-				bottom: 32px;
-			}
-		}
-	}
+  .contents {
+    justify-content: center;
+  }
+  .w33 {
+    width: 100%;
+    padding: 8px;
+    margin: 8px;
+    background-color: @blue;
+    border-radius: 15px;
+    position: relative;
+    letter-spacing: 0;
+    .image,
+    .content,
+    .btn {
+      transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    .image {
+      background-size: cover;
+      height: 45.4vw;
+    }
+    .content,
+    .btn {
+      position: absolute;
+      left: 0;
+      right: 0;
+      color: white;
+      text-align: center;
+      opacity: 0;
+    }
+    .content {
+      top: 0;
+      .name {
+        font-weight: 700;
+      }
+      .skills {
+        font-size: 12px;
+      }
+    }
+    .btn {
+      bottom: 0;
+      border: 2px solid white;
+      margin: 0 auto;
+      width: 150px;
+      padding: 8px 0;
+      line-height: 1;
+      text-transform: uppercase;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    &:hover {
+      .image {
+        opacity: 0;
+      }
+      .content,
+      .btn {
+        opacity: 1;
+      }
+      .content {
+        top: 32px;
+      }
+      .btn {
+        bottom: 32px;
+      }
+    }
+  }
 }
 #resume {
-	.slider-wrap {
-		padding-top: 0;
-		padding-bottom: 2rem;
-	}
-	.resume-slider {
-		.slick-prev:before, .slick-next:before {
-			color: white;
-		}
-	}
-	.contents {
-		justify-content: space-between;
-	}
-	.major {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		font-weight: 700;
-		letter-spacing: 0;
-		span {
-			font-weight: 300;
-			font-size: 15px;
-		}
-	}
-	.school {
-		margin-bottom: 1.5rem;
-	}
-	ul {
-		margin-bottom: 0;
-	}
-	#edu ul {
-		margin-top: -1.5rem;
-		margin-bottom: 1.5rem;
-	}
+  .slider-wrap {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+  .resume-slider {
+    .slick-prev:before,
+    .slick-next:before {
+      color: white;
+    }
+  }
+  .contents {
+    justify-content: space-between;
+  }
+  .major {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: 700;
+    letter-spacing: 0;
+    span {
+      font-weight: 300;
+      font-size: 15px;
+    }
+  }
+  .school {
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin-bottom: 0;
+  }
+  #edu ul {
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 .links {
-	.pentagon {
-		background-image: url('/images/pentagon.png');
-		background-size: cover;
-		background-repeat: no-repeat;
-		color: white;
-		width: 92px;
-		height: 92px;
-		position: relative;
-		margin-left: 4px;
-		margin-right: 4px;
-		&:hover {
-			background-image: url('/images/pentagon-w.png');
-			.link-contact {
-				color: @blue;
-			}
-		}
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-		.link-contact {
-			position: absolute;
-			color: white;
-			&#email {
-				font-size: 19px;
-				font-weight: 700;
-				top: 38%;
-				left: 14%;
-			}
-			&#github {
-				font-size: 49px;
-				left: 27%;
-				top: 18%;
-			}
-			&#code-camp {
-				font-size: 42px;
-				left: 22%;
-				top: 23%;
-			}
-			&:hover {
-				text-decoration: none;
-			}
-		}
-	}
+  .pentagon {
+    background-image: url('/images/pentagon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    width: 92px;
+    height: 92px;
+    position: relative;
+    margin-left: 4px;
+    margin-right: 4px;
+    &:hover {
+      background-image: url('/images/pentagon-w.png');
+      .link-contact {
+        color: @blue;
+      }
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    .link-contact {
+      position: absolute;
+      color: white;
+      &#email {
+        font-size: 19px;
+        font-weight: 700;
+        top: 38%;
+        left: 14%;
+      }
+      &#github {
+        font-size: 49px;
+        left: 27%;
+        top: 18%;
+      }
+      &#code-camp {
+        font-size: 42px;
+        left: 22%;
+        top: 23%;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
-	.title {
-		font-size: 20px;
-	}
+  .title {
+    font-size: 20px;
+  }
 }
 @media only screen and (min-width: 768px) {
-	section {
-		padding-top: 100px;
-		padding-bottom: 100px;
-	}
-	.divider {
-		margin-bottom: 3rem;
-	}
-	#about {
-		img {
-			max-width: unset;
-		}
-	}
-	#experience {
-		.card-header .header span {
-			display: inline-block;
-		}
-		.btn-link {
-			font-size: 23px;
-			padding: 20px;
-		}
-	}
-	#portfolio .w33 {
-		width: 47%;
-		.image {
-			height: 22.6vw;
-		}
-	}
-	#resume {
-		.contents {
-			font-size: 19px;
-		}
-		.major span {
-			font-size: 17px;
-		}
-	}
-	.links .btn {
-		padding: 8px 32px;
-		font-size: 30px;
-		width: 180px;
-		&.icon {
-			font-size: 45px;
-		}
-	}
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .divider {
+    margin-bottom: 3rem;
+  }
+  #about {
+    img {
+      max-width: unset;
+    }
+  }
+  #experience {
+    .card-header .header span {
+      display: inline-block;
+    }
+    .btn-link {
+      font-size: 23px;
+      padding: 20px;
+    }
+  }
+  #portfolio .w33 {
+    width: 47%;
+    .image {
+      height: 22.6vw;
+    }
+  }
+  #resume {
+    .contents {
+      font-size: 19px;
+    }
+    .major span {
+      font-size: 17px;
+    }
+  }
+  .links .btn {
+    padding: 8px 32px;
+    font-size: 30px;
+    width: 180px;
+    &.icon {
+      font-size: 45px;
+    }
+  }
 }
 @media only screen and (min-width: 992px) {
-	#portfolio .w33 {
-		width: 31%;
-		.image {
-			height: 15vw;
-		}
-	}
-	#resume {
-		.slider-wrap {
-			padding-top: 1rem;
-			padding-bottom: 6rem;
-		}
-	}
+  #portfolio .w33 {
+    width: 31%;
+    .image {
+      height: 15vw;
+    }
+  }
+  #resume {
+    .slider-wrap {
+      padding-top: 1rem;
+      padding-bottom: 6rem;
+    }
+  }
 }
 @media only screen and (max-width: 1199px) {
-	#portfolio .w33 .content .name {
-		font-size: 16px;
-	}
+  #portfolio .w33 .content .name {
+    font-size: 16px;
+  }
 }
 @media only screen and (min-width: 1200px) {
-	#experience .card-header .header div {
-		display: inline-block;
-	}
-	#portfolio .w33 {
-		.image {
-			height: 185px;
-		}
-	}
-	#resume {
-		.contents, .major span {
-			font-size: 22px;
-		}
-	}
+  #experience .card-header .header div {
+    display: inline-block;
+  }
+  #portfolio .w33 {
+    .image {
+      height: 185px;
+    }
+  }
+  #resume {
+    .contents,
+    .major span {
+      font-size: 22px;
+    }
+  }
 }
