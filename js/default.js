@@ -17,10 +17,10 @@ $(function () {
 
     // ACTION BRAND NAME
     if (isMobile && pos >= $('nav').height()) {
-      $('.navbar-brand .description').hide('slow');
+      $('.navbar-brand .description').fadeOut('slow');
       $('header').addClass('scrolled');
     } else if (pos >= $('#experience').height()) {
-      $('.navbar-brand .description').hide('slow');
+      $('.navbar-brand .description').fadeOut('slow');
       $('header').addClass('scrolled');
     } else {
       $('.navbar-brand .description').fadeIn('slow');
