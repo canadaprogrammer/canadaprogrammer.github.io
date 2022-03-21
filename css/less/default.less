@@ -46,11 +46,33 @@ a {
 button:focus {
   outline: none;
 }
-.title {
+.title,
+h1 {
   font-family: 'Dosis', sans-serif;
-  text-transform: uppercase;
   font-weight: 800;
-  text-align: center;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+  span {
+    font-size: 0.7em;
+    font-weight: 400;
+  }
+}
+.title-extra {
+  font-size: clamp(2rem, 3vw + 1rem, 4rem);
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.typewriter {
+  &.manual {
+    // h1,
+    h2 {
+      font-family: 'Special Elite', cursive;
+      letter-spacing: 0.15em;
+      animation: blink 500ms step-end;
+    }
+  }
 }
 .divider {
   border-bottom: 3px solid;
@@ -147,13 +169,11 @@ section {
   padding-bottom: 16px;
   color: white;
   .default-gradient;
-  &:nth-of-type(2n + 1) {
-    color: @001;
-    background: #fff;
-  }
 }
 #intro {
   height: 100vh;
+  display: flex;
+  align-items: center;
   .default-gradient;
 }
 #about {
