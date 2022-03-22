@@ -190,7 +190,7 @@ window.onload = function () {
     }, speed);
   }
 
-  const manualTyping = document.querySelector('.manual h2');
+  const manualTyping = document.querySelector('.manual');
   typingEffect(manualTyping, 300);
 
   // TYPING EFFECT 2

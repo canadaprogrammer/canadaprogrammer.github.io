@@ -8,7 +8,7 @@ font-weight: 400, 600;
 font-family: 'Special Elite', cursive;
 */
 
-@001: rgb(58, 0, 124);
+@001: rgb(57, 0, 122);
 @001-1: rgb(40, 0, 87);
 @001-2: rgb(24, 0, 51);
 @002: rgb(0, 69, 178);
@@ -56,16 +56,12 @@ h1 {
     font-weight: 400;
   }
 }
-.title-extra {
-  font-size: clamp(2rem, 3vw + 1rem, 4rem);
-}
 .typewriter {
   &.manual {
-    // h1,
-    h2 {
-      font-family: 'Special Elite', cursive;
-      letter-spacing: 0.15em;
-    }
+    font-family: 'Special Elite', cursive;
+    font-size: clamp(2rem, 3vw + 1rem, 3.25rem);
+    letter-spacing: 0.15em;
+    margin-bottom: 0;
   }
 }
 @keyframes blink {
@@ -81,6 +77,7 @@ h1 {
   padding-right: 2px;
   border-right: 4px solid;
   animation: blink 1s steps(40) infinite normal;
+  font-size: 1.2em;
 }
 .divider {
   border-bottom: 3px solid;
@@ -183,6 +180,15 @@ section {
   display: flex;
   align-items: center;
   .default-gradient;
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  #myCanvas {
+    width: 100%;
+  }
 }
 #about {
   .image {
