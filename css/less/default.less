@@ -59,20 +59,28 @@ h1 {
 .title-extra {
   font-size: clamp(2rem, 3vw + 1rem, 4rem);
 }
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 .typewriter {
   &.manual {
     // h1,
     h2 {
       font-family: 'Special Elite', cursive;
       letter-spacing: 0.15em;
-      animation: blink 500ms step-end;
     }
   }
+}
+@keyframes blink {
+  from {
+    border-right-color: rgba(255, 255, 255, 1);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+#typewrite > .wrap {
+  position: relative;
+  padding-right: 2px;
+  border-right: 4px solid;
+  animation: blink 1s steps(40) infinite normal;
 }
 .divider {
   border-bottom: 3px solid;
