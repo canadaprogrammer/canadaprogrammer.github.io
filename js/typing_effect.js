@@ -21,8 +21,10 @@ window.onload = function () {
     }, speed);
   }
 
-  const manualTyping = document.querySelector('.manual');
-  typingEffect(manualTyping, 300);
+  setTimeout(function () {
+    const manualTyping = document.querySelector('.manual');
+    typingEffect(manualTyping, 300);
+  }, 400);
 
   // TYPING EFFECT 2
   let txtType = function (el, dataType) {
