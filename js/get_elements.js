@@ -11,7 +11,7 @@ const getSection = function (url, ele) {
     });
 };
 getSection('/views/header.html', 'header');
-getSection('/views/intro.html', '#intro');
+// getSection('/views/intro.html', '#intro');
 getSection('/views/about.html', '#about');
 getSection('/views/experience.html', '#experience');
 getSection('/views/portfolio.html', '#portfolio');
