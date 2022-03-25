@@ -1,6 +1,6 @@
 $(function () {
   let navHeight = $('header').height();
-  $('#intro').css('paddingTop', navHeight);
+  // $('#intro').css('paddingTop', navHeight);
   var isMobile;
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(

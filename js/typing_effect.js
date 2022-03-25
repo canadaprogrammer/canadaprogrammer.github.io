@@ -36,6 +36,7 @@ window.onload = function () {
     this.isDeleting = false;
   };
   txtType.prototype.tick = function () {
+    const colors = ['#39007a', '#00e2c8', '#0099dd', '#00bed6'];
     let i = this.loopNum % this.dataType.length;
     let fullTxt = this.dataType[i];
 
@@ -45,7 +46,12 @@ window.onload = function () {
       this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+    this.el.innerHTML =
+      '<span class="wrap" style="color:' +
+      colors[this.loopNum % colors.length] +
+      ';">' +
+      this.txt +
+      '</span>';
 
     let that = this;
     let delta = 200 - Math.random() * 100;
