@@ -27,6 +27,7 @@
 		<link rel="stylesheet/less" type="text/less" href="/css/less/slider.less" />
 		<script src="/js/less.min.js" data-env="development"></script>
 		<script src="/js/jquery.js" type="text/javascript"></script>		
+		<script src="/js/get_elements.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<header></header>
@@ -118,90 +119,242 @@
 			<section id="about"></section>
 			<section id="experience"></section>
 			<section id="portfolio"></section>
-			<!-- <section id="resume">
-				<div class="container">
-					<h2 class="title">Resume</h2>
-					<div class="divider"></div>
-					<div class="sub-title">Skills</div>
-					<div class="contents">
-						<h3>Programming Languages</h3>
-						<div id="language" class="slider-wrap">
-							<div class="resume-slider">
-								<div><img src="/images/skills/php.png" alt="PHP" title="PHP"></div>
-								<div><img src="/images/skills/javascript.png" alt="JavaScript" title="JavaScript"></div>
-								<div><img src="/images/skills/html.png" alt="HTML" title="HTML"></div>
-								<div><img src="/images/skills/css.png" alt="CSS" title="CSS"></div>
-								<div><img src="/images/skills/mysql.png" alt="MySQL" title="MySQL"></div>
-								<div><img src="/images/skills/csharp.png" alt="C#" title="C#"></div>
-								<div><img src="/images/skills/react.png" alt="React" title="React"></div>
-								<div><img src="/images/skills/nodejs.png" alt="Nodejs" title="Nodejs"></div>
-								<div><img src="/images/skills/python.png" alt="Python" title="Python"></div>
-								<div><img src="/images/skills/mongodb-w.png" alt="MongoDB" title="MongoDB"></div>
-							</div>
-						</div>
-						<h3>Working Knowledge</h3>
-						<div id="knowledge" class="slider-wrap">
-							<div class="resume-slider">
-								<div><img src="/images/skills/jquery.png" alt="jQuery" title="jQuery"></div>
-								<div><img src="/images/skills/ajax.png" alt="Ajax" title="Ajax"></div>
-								<div><img src="/images/skills/git-w.png" alt="Git" title="Git"></div>
-								<div><img src="/images/skills/laravel-w.png" alt="Laravel" title="Laravel"></div>
-								<div><img src="/images/skills/npm.png" alt="npm" title="npm"></div>
-								<div><img src="/images/skills/postman.png" alt="Postman" title="Postman"></div>
-								<div><img src="/images/skills/googleapi.png" alt="Google APIs" title="Google APIs"></div>
-								<div><img src="/images/skills/redux.png" alt="Redux" title="Redux"></div>
-							</div>
-						</div>
-						<h3>Software</h3>
-						<div id="software" class="slider-wrap">
-							<div class="resume-slider">
-								<div><img src="/images/skills/vscode.png" alt="VS Code" title="VS Code"></div>
-								<div><img src="/images/skills/photoshop.png" alt="Photoshop" title="Photoshop"></div>
-								<div><img src="/images/skills/filezilla.png" alt="FileZilla" title="FileZilla"></div>
-								<div><img src="/images/skills/visualstudio.png" alt="Visual Studio" title="Visual Studio"></div>
-								<div><img src="/images/skills/wamp.png" alt="WAMP Server" title="WAMP Server"></div>
-								<div><img src="/images/skills/putty.png" alt="PuTTY" title="PuTTY"></div>
-							</div>
-						</div>
-					</div>
-					<div class="sub-title">Education</div>
-					<div class="contents" id="edu">
-						<div class="col-12 major">Advanced Diploma in Computer Programmer and Analyst (3 years) <span>Jan 2016 - Jan 2018</span></div>
-						
-						<div class="col-12 school">Niagara College Canada, Welland, Ontario</div>
-						<div class="col-12 major">Bachelor of Arts (B. A.) in Statistics <span>Mar 1996 - Feb 2002</span></div>
-						<div class="col-12 school">Inha University, Incheon, South Korea</div>
-						<div class="col-12 major">Computer Science (CS50) <span>Mar 2020 - May 2020</span></div>
-						<div class="col-12 school">HarvardX on edx.org</div>
-						<div>
-							<ul>
-								<li>Introduction to Computer Science</li>
-								<li>Web Programming with Python and JavaScript</li>
-								<li>Mobile App Development with React Native</li>
-							</ul>
-						</div>
-						<div class="col-12 major">Full-Stack Developer Curriculum <span>Apr 2019 - Jul 2019</span></div>
-						<div class="col-12 school">freeCodeCamp, Online</div>
-						<div>
-							<ul>
-								<li>Front End Libraries Certification</li>
-								<li>Responsive Web Design Certification</li>
-								<li>JavaScript Algorithms and Data Structures Certification</li>
-							</ul>
-						</div>
-						<div class="col-12 major">English for Academic Preparation (EAP) <span>May 2015 - Dec 2015</span></div>
-						<div class="col-12 school">Niagara College Canada, Niagara-on-the-Lake, Ontario</div>
-					</div>
-				</div>
-			</section> -->
+			<!-- <section id="resume"></section> -->
 			<section id="contact"></section>
 		</main>
 		<footer></footer>
 		<!-- Modal -->
-		<div id="case_studies"></div>
+		<div id="case_studies">
+			<div class="modal fade" id="weinkeller" tabindex="-1" role="dialog" aria-labelledby="weinkeller_title" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal-slider-wrap">
+								<div class="slider">
+									<div><img src="/images/portfolio/weinkeller.jpg" alt=""></div>
+									<div><img src="/images/portfolio/weinkeller_device.jpg" alt=""></div>
+									<div><img src="/images/portfolio/weinkeller_1.jpg" alt=""></div>
+									<div><img src="/images/portfolio/weinkeller_2.jpg" alt=""></div>
+									<div><img src="/images/portfolio/weinkeller_3.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-description">
+							<h3 class="modal-title" id="weinkeller_title">Weinkeller</h3>
+							<div class="modal-detail">A Craft Winery and Locally sourced, fresh food Canadian experience</div>
+						</div>
+						<div class="modal-header">
+							<a class="btn blue" href="https://www.weinkeller.ca/" target="_blank">View Site</a>
+							<button type="button" class="btn red" data-dismiss="modal"><i class="fa fa-close fa-2x"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="grimsby" tabindex="-1" role="dialog" aria-labelledby="grimsby_title" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal-slider-wrap">
+								<div class="slider">
+									<div><img src="/images/portfolio/grimsbypower.jpg" alt=""></div>
+									<div><img src="/images/portfolio/grimsbypower_device.jpg" alt=""></div>
+									<div><img src="/images/portfolio/grimsbypower_2.jpg" alt=""></div>
+									<div><img src="/images/portfolio/grimsbypower_3.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-description">
+							<h3 class="modal-title" id="grimsby_title">Grimsby Power</h3>
+							<div class="modal-detail">Grimsby Power Incorporated is a Local Distribution Company (LDC) with an emphasis on local.  Grimsby Power is responsible for distributing power to customers within the Town of Grimsby.</div>
+						</div>
+						<div class="modal-header">
+							<a class="btn blue" href="http://grimsbypower.com/" target="_blank">View Site</a>
+							<button type="button" class="btn red" data-dismiss="modal"><i class="fa fa-close fa-2x"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="hestian" tabindex="-1" role="dialog" aria-labelledby="hestian_title" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal-slider-wrap">
+								<div class="slider">
+									<div><img src="/images/portfolio/hestiancustomfires.jpg" alt=""></div>
+									<div><img src="/images/portfolio/hestiancustomfires_device.jpg" alt=""></div>
+									<div><img src="/images/portfolio/hestiancustomfires_1.jpg" alt=""></div>
+									<div><img src="/images/portfolio/hestiancustomfires_2.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-description">
+							<h3 class="modal-title" id="hestian_title">Hestian Custom Fires</h3>
+							<div class="modal-detail">With over 25 years experience, Hestian Custom Fires strives to impact people through places.</div>
+						</div>
+						<div class="modal-header">
+							<a class="btn blue" href="http://hestiancustomfires.com/" target="_blank">View Site</a>
+							<button type="button" class="btn red" data-dismiss="modal"><i class="fa fa-close fa-2x"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="drogon" tabindex="-1" role="dialog" aria-labelledby="drogon_title" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal-slider-wrap">
+								<div class="slider">
+									<div><img src="/images/portfolio/dragonseyeconsulting.jpg" alt=""></div>
+									<div><img src="/images/portfolio/dragonseyeconsulting_device.jpg" alt=""></div>
+									<div><img src="/images/portfolio/dragonseyeconsulting_1.jpg" alt=""></div>
+									<div><img src="/images/portfolio/dragonseyeconsulting_2.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-description">
+							<h3 class="modal-title" id="drogon_title">Dragon's Eye Consulting</h3>
+							<div class="modal-detail">Dragon's Eye has nearly three decades of experience across 10 industries, with a strong track record of expanding revenues, overseeing successful initiatives, and building a winning culture.</div>
+						</div>
+						<div class="modal-header">
+							<a class="btn blue" href="https://dragonseyeconsulting.com/" target="_blank">View Site</a>
+							<button type="button" class="btn red" data-dismiss="modal"><i class="fa fa-close fa-2x"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="cch" tabindex="-1" role="dialog" aria-labelledby="cch_title" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal-slider-wrap">
+								<div class="slider">
+									<div><img src="/images/portfolio/compassch.jpg" alt=""></div>
+									<div><img src="/images/portfolio/compassch_device.jpg" alt=""></div>
+									<div><img src="/images/portfolio/compassch_1.jpg" alt=""></div>
+									<div><img src="/images/portfolio/compassch_2.jpg" alt=""></div>
+									<div><img src="/images/portfolio/compassch_3.jpg" alt=""></div>
+									<div><img src="/images/portfolio/compassch_4.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-description">
+							<h3 class="modal-title" id="cch_title">Compass Community Health</h3>
+							<div class="modal-detail">For over thirty years, the Health Centre has been a mainstay in Hamilton’s North End communities</div>
+						</div>
+						<div class="modal-header">
+							<a class="btn blue" href="https://compassch.org/" target="_blank">View Site</a>
+							<button type="button" class="btn red" data-dismiss="modal"><i class="fa fa-close fa-2x"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="awsum" tabindex="-1" role="dialog" aria-labelledby="awsum_title" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal-slider-wrap">
+								<div class="slider">
+									<div><img src="/images/portfolio/awsumwoodproducts.jpg" alt=""></div>
+									<div><img src="/images/portfolio/awsumwoodproducts_device.jpg" alt=""></div>
+									<div><img src="/images/portfolio/awsumwoodproducts_1.jpg" alt=""></div>
+									<div><img src="/images/portfolio/awsumwoodproducts_2.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-description">
+							<h3 class="modal-title" id="awsum_title">Awsum Wood Products</h3>
+							<div class="modal-detail">Awsum Wood Products craftS from locally salvaged trees in Bruce County.</div>
+						</div>
+						<div class="modal-header">
+							<a class="btn blue" href="http://awsumwoodproducts.com/" target="_blank">View Site</a>
+							<button type="button" class="btn red" data-dismiss="modal"><i class="fa fa-close fa-2x"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="calorie" tabindex="-1" role="dialog" aria-labelledby="calorie_title" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal-slider-wrap">
+								<div class="slider">
+									<div><img src="/images/portfolio/caloriewizapp.jpg" alt=""></div>
+									<div><img src="/images/portfolio/caloriewizapp_1.jpg" alt=""></div>
+									<div><img src="/images/portfolio/caloriewizapp_2.jpg" alt=""></div>
+									<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/30KmliGmh7Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+								</div>
+							</div>
+						</div>
+						<div class="modal-description">
+							<h3 class="modal-title" id="calorie_title">Calorie Wiz App</h3>
+							<div class="modal-detail">Calorie Counter Mobile Application</div>
+						</div>
+						<div class="modal-header">
+							<div>
+								<a class="btn blue" href="http://caloriewizapp.com/" target="_blank">View Site</a>
+								<a class="btn blue" href="https://youtu.be/30KmliGmh7Y" target="_blank">Youtube</a>
+							</div>
+							<button type="button" class="btn red" data-dismiss="modal"><i class="fa fa-close fa-2x"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="modal fade" id="coosha" tabindex="-1" role="dialog" aria-labelledby="coosha_title" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal-slider-wrap">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/_ThGxDx7F5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="modal-description">
+							<h3 class="modal-title" id="coosha_title">Coosha Calendar</h3>
+							<div class="modal-detail">Calendar Mobile Application</div>
+						</div>
+						<div class="modal-header">
+							<div></div>
+							<button type="button" class="btn red close-modal" data-dismiss="modal"><i class="fa fa-close fa-2x"></i></button>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="modal fade" id="side" tabindex="-1" role="dialog" aria-labelledby="side_title" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal-slider-wrap">
+								<div class="slider">
+									<div><img src="/images/portfolio/side_1.png" alt=""></div>
+									<div><img src="/images/portfolio/side_2.png" alt=""></div>
+									<div><img src="/images/portfolio/side_3.png" alt=""></div>
+									<div><img src="/images/portfolio/side_4.png" alt=""></div>
+									<div><img src="/images/portfolio/side_5.png" alt=""></div>
+									<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ftJXY-xQm80" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+								</div>
+							</div>
+						</div>
+						<div class="modal-description">
+							<h3 class="modal-title" id="side_title">Reactjs / C#</h3>
+							<div class="modal-detail">
+								
+							</div>
+						</div>
+						<div class="modal-header">
+							<div>
+							<a class="btn blue" href="https://canadaprogrammer.github.io/drum-machine/" target="_blank">Drum Machine</a>
+							<a class="btn blue" href="https://canadaprogrammer.github.io/javascript-calculator/" target="_blank">Calculator</a>
+							<a class="btn blue" href="https://canadaprogrammer.github.io/random-quote-machine/" target="_blank">Random Quote</a>
+							<a class="btn blue" href="https://canadaprogrammer.github.io/pomodoro-clock/" target="_blank">Pomodoro</a>
+							<a class="btn blue" href="https://youtu.be/ftJXY-xQm80" target="_blank">Stopwatch</a>
+							</div>
+							<button type="button" class="btn red" data-dismiss="modal"><i class="fa fa-close fa-2x"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 		<script src="/slick/slick.min.js" type="text/javascript" defer></script>		
-		<script src="/js/get_elements.js" type="text/javascript"></script>
 		<script src="/js/navigation.js" type="text/javascript" defer></script>
 		<script src="/js/slider.js" type="text/javascript" defer></script>
 		<script src="/js/typing_effect.js" type="text/javascript" defer></script>

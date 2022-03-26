@@ -17,4 +17,4 @@ getSection('/views/experience.html', '#experience');
 getSection('/views/portfolio.html', '#portfolio');
 getSection('/views/contact.html', '#contact');
 getSection('/views/footer.html', 'footer');
-getSection('/views/case_studies.html', '#case_studies');
+// getSection('/views/case_studies.html', '#case_studies');

@@ -1,7 +1,9 @@
 $(function () {
   // SLICK SLIDER
   $('.slider').slick();
-  $('.modal').on('shown.bs.modal', function () {
+  console.log($('.modal'));
+  $('.modal').on('shown.bs.modal', function (event) {
+    console.log(event.relatedTarget);
     $('.slider').slick('setPosition');
     $('.modal-slider-wrap').addClass('open');
   });

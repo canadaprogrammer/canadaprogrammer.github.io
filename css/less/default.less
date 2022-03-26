@@ -63,6 +63,9 @@ h1 {
     font-weight: 400;
   }
 }
+.title {
+  text-align: center;
+}
 .typewriter {
   &.manual {
     font-family: 'Special Elite', cursive;
@@ -208,16 +211,20 @@ section {
   }
 }
 #experience {
-  .card {
+  .accordion-item {
     background-color: transparent;
   }
-  .card-header {
+  .accordion-header {
     background-color: transparent;
     padding: 0;
     margin: 0;
     border-bottom: unset;
     .header {
-      text-align: left;
+      width: 90%;
+      > div {
+        display: flex;
+        justify-content: space-between;
+      }
       span {
         display: block;
       }
@@ -227,6 +234,7 @@ section {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: white;
     padding: 16px;
     border-top: 1px solid rgba(255, 255, 255, 0.7);
@@ -234,23 +242,28 @@ section {
     font-size: 16px;
     &.btn {
       border-radius: unset;
+      text-decoration: none;
       &:hover {
         text-decoration: none;
       }
     }
-    .fa {
+    .fa-chevron-up {
+      display: inline-block;
+    }
+    .fa-chevron-down {
       display: none;
-      &.active {
+    }
+    &.collapsed {
+      .fa-chevron-up {
+        display: none;
+      }
+      .fa-chevron-down {
         display: inline-block;
       }
     }
   }
-  .card-body ul {
+  .accordion-body ul {
     padding-inline-start: 20px;
-  }
-  .collapse,
-  .collapsing {
-    .default-gradient;
   }
 }
 #portfolio {
