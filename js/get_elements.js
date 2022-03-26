@@ -11,10 +11,11 @@ const getSection = function (url, ele) {
     });
 };
 getSection('/views/header.html', 'header');
-// getSection('/views/intro.html', '#intro');
+// getSection('/views/home.html', '#home');
 getSection('/views/about.html', '#about');
 getSection('/views/experience.html', '#experience');
 getSection('/views/portfolio.html', '#portfolio');
-getSection('/views/contact.html', '#contact');
-getSection('/views/footer.html', 'footer');
+// getSection('/views/contact.html', '#contact');
+// getSection('/views/footer.html', 'footer');
+// getSection('/views/resume.html', '#resume');
 // getSection('/views/case_studies.html', '#case_studies');

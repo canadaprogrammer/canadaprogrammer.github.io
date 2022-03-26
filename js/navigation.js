@@ -29,24 +29,30 @@ $(function () {
     }
 
     // Link Highlighting
+    if (pos2 > $('#home').offset().top) {
+      highlightLink('home');
+    }
     if (pos2 > $('#about').offset().top) {
       highlightLink('about');
     }
     if (pos2 > $('#experience').offset().top) {
       highlightLink('experience');
     }
-    if (pos2 > $('#portfolio').offset().top) {
+    if (
+      pos2 > $('#portfolio').offset().top ||
+      pos + $(window).height() === $(document).height()
+    ) {
       highlightLink('portfolio');
     }
     // if (pos2 > $('#resume').offset().top) {
     //   highlightLink('resume');
     // }
-    if (
-      pos2 > $('#contact').offset().top ||
-      pos + $(window).height() === $(document).height()
-    ) {
-      highlightLink('contact');
-    }
+    // if (
+    //   pos2 > $('#contact').offset().top ||
+    //   pos + $(window).height() === $(document).height()
+    // ) {
+    //   highlightLink('contact');
+    // }
   });
 
   function highlightLink(anchor) {
@@ -57,32 +63,32 @@ $(function () {
   }
 
   // EVENT HANDLERS
-  $('.btn-link').click(function () {
-    $(this)
-      .find('.fa')
-      .each(function () {
-        if ($(this).hasClass('active')) {
-          $(this).removeClass('active');
-        } else {
-          $(this).addClass('active');
-        }
-      });
-    $(this)
-      .closest('.card')
-      .siblings()
-      .find('.fa')
-      .each(function () {
-        if ($(this).hasClass('fa-chevron-down')) {
-          if (!$(this).hasClass('active')) {
-            $(this).addClass('active');
-          }
-        } else {
-          if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-          }
-        }
-      });
-  });
+  // $('.btn-link').click(function () {
+  //   $(this)
+  //     .find('.fa')
+  //     .each(function () {
+  //       if ($(this).hasClass('active')) {
+  //         $(this).removeClass('active');
+  //       } else {
+  //         $(this).addClass('active');
+  //       }
+  //     });
+  //   $(this)
+  //     .closest('.card')
+  //     .siblings()
+  //     .find('.fa')
+  //     .each(function () {
+  //       if ($(this).hasClass('fa-chevron-down')) {
+  //         if (!$(this).hasClass('active')) {
+  //           $(this).addClass('active');
+  //         }
+  //       } else {
+  //         if ($(this).hasClass('active')) {
+  //           $(this).removeClass('active');
+  //         }
+  //       }
+  //     });
+  // });
   $('.nav-link').click(function () {
     var anchor = $(this).attr('dest');
     // $('.link-wrap').removeClass('visible');
