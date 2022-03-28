@@ -43,7 +43,8 @@ header {
   font-family: 'Exo', sans-serif;
   font-weight: 400;
   color: white;
-  background: transparent;
+  // background: transparent;
+  .default-gradient-transparent;
   // border-bottom: 3px solid white;
   z-index: 10;
   position: fixed;
@@ -69,7 +70,7 @@ header {
   font-size: inherit;
   line-height: 1;
   img {
-    width: 130px;
+    width: 80px;
     transition: width 400ms cubic-bezier(0.3, 0.7, 0.4, 1);
   }
   .description {
@@ -215,6 +216,9 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
+  header {
+    background: transparent;
+  }
   // header,
   // footer {
   //   background: linear-gradient(
@@ -225,6 +229,9 @@ footer {
   //     @shadow-blue
   //   );
   // }
+  .navbar-brand img {
+    width: 130px;
+  }
   footer .copyright {
     .default-gradient;
   }
@@ -239,9 +246,6 @@ footer {
 
 @media only screen and (max-width: 1199px) {
   .navbar-brand {
-    img {
-      width: 110px;
-    }
     .description {
       font-size: 1.3em;
     }

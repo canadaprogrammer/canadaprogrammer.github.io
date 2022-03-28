@@ -3,47 +3,53 @@
 @shadow-blue: #00223c;
 
 .modal-dialog {
-  max-width: 730px;
+  // max-width: 730px;
+  max-width: 1200px;
+}
+@media only screen and (max-width: 1399px) {
+  .modal-dialog {
+    max-width: 900px;
+  }
 }
 .modal-slider-wrap {
   padding: 0 30px;
   opacity: 0;
-	transition: all 0.3s;
-	&.open {
-		opacity: 1;
-	}
+  transition: all 0.3s;
+  &.open {
+    opacity: 1;
+  }
 }
 .modal-description {
-	padding: 16px;
-	.modal-title {
-		color: @blue;
-		font-weight: 700;
-	}
-} 
+  padding: 16px;
+  .modal-title {
+    color: @blue;
+    font-weight: 700;
+  }
+}
 .modal-header {
-	.btn {
-		padding: 4px 8px;
-		margin: 2px 0;
-		&.blue {
-			color: white;
-			background-color: @blue;
-			&:hover {
-				color: @blue;
-				background-color: white;
-				border: 1px solid @blue;
-			}
-		}
-		&.red {
-			color: white;
-			background-color: #ed0000;
-			font-size: 12px;
-			&:hover {
-				color: #ed0000;
-				background-color: white;
-				border: 1px solid #ed0000;
-			}
-		}
-	}
+  .btn {
+    padding: 4px 8px;
+    margin: 2px 0;
+    &.blue {
+      color: white;
+      background-color: @blue;
+      &:hover {
+        color: @blue;
+        background-color: white;
+        border: 1px solid @blue;
+      }
+    }
+    &.red {
+      color: white;
+      background-color: #ed0000;
+      font-size: 12px;
+      &:hover {
+        color: #ed0000;
+        background-color: white;
+        border: 1px solid #ed0000;
+      }
+    }
+  }
 }
 // .modal iframe {
 // 	height: 122px !important;
@@ -51,18 +57,18 @@
 // }
 
 @media only screen and (min-width: 768px) {
-	// .modal iframe {
-	// 	height: 369px !important;
-	// }
-	.modal-header {
-		.btn {
-			padding: 8px 16px;
-		}
-	}
+  // .modal iframe {
+  // 	height: 369px !important;
+  // }
+  .modal-header {
+    .btn {
+      padding: 8px 16px;
+    }
+  }
 }
 
 @media only screen and (min-width: 1200px) {
-// .modal iframe {
-// 	height: 315px !important;
-// }
+  // .modal iframe {
+  // 	height: 315px !important;
+  // }
 }
