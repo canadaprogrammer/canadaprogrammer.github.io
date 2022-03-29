@@ -12,21 +12,25 @@
   }
 }
 .modal-slider-wrap {
-  padding: 0 30px;
+  padding: 0;
   opacity: 0;
   transition: all 0.3s;
   &.open {
     opacity: 1;
   }
+  .slick-slide {
+    padding: 1rem 3rem;
+  }
 }
 .modal-description {
-  padding: 16px;
+  padding: 1rem 4rem;
   .modal-title {
     color: @blue;
     font-weight: 700;
   }
 }
 .modal-header {
+  padding: 1rem 1rem 1rem 4rem;
   .btn {
     padding: 4px 8px;
     margin: 2px 0;

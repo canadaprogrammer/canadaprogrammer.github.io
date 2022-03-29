@@ -14,20 +14,27 @@
     width: 100%;
   }
 }
-.slick-prev:before,
-.slick-next:before {
-  font-family: 'FontAwesome';
-  font-size: 26px;
-  color: @blue;
+.slick-prev,
+.slick-next {
+  width: 50px;
+  height: 50px;
+  &:before {
+    font-family: 'FontAwesome';
+    font-size: 26px;
+    color: @blue;
+  }
 }
 .slick-prev {
-  left: -40px;
+  left: 0px;
   &:before {
     content: '\f053';
   }
 }
-.slick-next:before {
-  content: '\f054';
+.slick-next {
+  right: 0;
+  &:before {
+    content: '\f054';
+  }
 }
 .slick-dots li {
   width: 15px;
@@ -68,6 +75,9 @@
     font-size: 50px;
   }
   .slick-prev {
-    left: -40px;
+    left: 0px;
+  }
+  .slick-next {
+    right: 0px;
   }
 }

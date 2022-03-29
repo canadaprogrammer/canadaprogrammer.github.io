@@ -237,6 +237,7 @@ section {
 #experience {
   .accordion-item {
     background-color: transparent;
+    border: none;
   }
   .accordion-header {
     background-color: transparent;
@@ -298,10 +299,24 @@ section {
     width: calc(100% - 16px);
     padding: 8px;
     margin: 8px;
-    background-color: @001;
     border-radius: 15px;
     position: relative;
     letter-spacing: 0;
+    &:nth-child(5n + 1) {
+      background-color: @001;
+    }
+    &:nth-child(5n + 2) {
+      background-color: @002;
+    }
+    &:nth-child(5n + 3) {
+      background-color: @003;
+    }
+    &:nth-child(5n + 4) {
+      background-color: @004;
+    }
+    &:nth-child(5n + 5) {
+      background-color: @005;
+    }
     .image,
     .content,
     .btn {
@@ -310,6 +325,7 @@ section {
     .image {
       background-size: cover;
       height: 45.4vw;
+      border-radius: 6px;
     }
     .content,
     .btn {
