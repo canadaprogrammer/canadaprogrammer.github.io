@@ -44,7 +44,8 @@ header {
   font-weight: 400;
   color: white;
   // background: transparent;
-  .default-gradient-transparent;
+  // .default-gradient-transparent;
+  background: @002-t;
   // border-bottom: 3px solid white;
   z-index: 10;
   position: fixed;
@@ -52,7 +53,8 @@ header {
   left: 0;
   right: 0;
   &.scrolled {
-    .default-gradient-transparent;
+    // .default-gradient-transparent;
+    background: @002-t;
     .navbar-brand img {
       width: 80px;
     }
@@ -150,33 +152,33 @@ h3,
   cursor: pointer;
   text-transform: uppercase;
   color: white;
-  text-shadow: 2px 2px @001;
+  text-shadow: 1px 1px @001;
   line-height: 1;
   &.active {
     font-weight: 700;
     letter-spacing: 2px;
     color: @006;
-    // text-shadow: 2px 2px @006;
+    // text-shadow: 1px 1px @001;
     &:focus,
     &:hover {
-      color: @006;
+      // color: @001;
       // text-shadow: 1px 1px @006, -1px -1px @006;
     }
   }
   &:focus,
-  &:hover {
+  &:hover:not(.active) {
     color: #eee;
     text-shadow: 1px 1px @001, -1px -1px @001;
   }
 }
 footer {
   color: white;
-  background: @001;
-  padding-top: 16px;
+  background: @002;
+  // padding-top: 16px;
   .contact {
     display: flex;
     flex-direction: column;
-    padding-top: 32px;
+    // padding-top: 32px;
     padding-bottom: 32px;
     a:hover {
       color: white;
@@ -184,11 +186,11 @@ footer {
     }
   }
   .copyright {
-    margin-top: 16px;
+    // margin-top: 16px;
     padding-top: 16px;
     padding-bottom: 16px;
     text-align: center;
-    background-color: @001;
+    background-color: @002;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -208,9 +210,9 @@ footer {
     font-size: 1.75rem;
   }
   footer {
-    padding-top: 43px;
+    // padding-top: 43px;
     .copyright {
-      margin-top: 75px;
+      // margin-top: 75px;
     }
   }
 }
@@ -233,10 +235,10 @@ footer {
     width: 130px;
   }
   footer .copyright {
-    .default-gradient;
+    // .default-gradient;
   }
   footer {
-    padding-top: 75px;
+    // padding-top: 75px;
     .contact {
       padding-top: 0;
       padding-bottom: 0;
