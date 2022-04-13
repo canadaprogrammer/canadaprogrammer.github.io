@@ -36,7 +36,12 @@ window.onload = function () {
     this.isDeleting = false;
   };
   txtType.prototype.tick = function () {
-    const colors = ['#39007a', '#00e2c8', '#0099dd', '#00bed6'];
+    let colors = [];
+    if (window.innerWidth > 991) {
+      colors = ['#39007a', '#00e2c8', '#0099dd', '#00bed6'];
+    } else {
+      colors = ['#39007a', '#280057', '#180033', '#0045b2'];
+    }
     let i = this.loopNum % this.dataType.length;
     let fullTxt = this.dataType[i];
 
